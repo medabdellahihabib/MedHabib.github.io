@@ -61,6 +61,16 @@
       </ul>
     </nav>
 
+    .project .image-container {
+      display: flex;
+    }
+    
+    .project .image-container img {
+      max-width: 50%; /* Chaque image occupe 50% de la largeur de la div parent */
+      height: auto;
+    }
+    
+
     <div class="project">
       <h2>Dhamet Application 2023</h2>
       <img src="dhamet.jpg" alt="Dhamet Application">
@@ -81,11 +91,13 @@
 
     <div class="project">
       <h2>Intelligent Agriculture Platform Oct/2023-Now</h2>
-      <img src="images\gh.jpeg" alt="Intelligent Agriculture Platform">
-      
-      <img src="images\Image1.png" alt="">
+      <div class="image-container">
+        <img src="images\gh.jpeg" alt="Intelligent Agriculture Platform">
+        <img src="images\Image1.png" alt="">
+      </div>
       <p>Development of an integrated agricultural platform: crop recommendation, production forecasting, pest control, real-time weather data. Use of innovative technologies: AI, IoT for optimal yields and sustainability.</p>
     </div>
+    
 
     <div class="project">
       <h2>INPC Data Management and Calculation Website Oct/2023-Now</h2>
