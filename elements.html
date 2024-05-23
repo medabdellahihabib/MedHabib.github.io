@@ -19,10 +19,10 @@
       padding: 20px;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 45%; /* Adjusted width to display two projects per line */
+      width: 45%;
       display: inline-block;
       vertical-align: top;
-      box-sizing: border-box; /* Added to correct the size of elements */
+      box-sizing: border-box;
     }
 
     .project h2 {
@@ -38,6 +38,30 @@
 
     .project p {
       color: #666;
+    }
+
+    .project .image-container {
+      display: flex;
+    }
+    
+    .project .image-container img {
+      max-width: 50%;
+      height: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      .project {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .project .image-container {
+        flex-direction: column;
+      }
+
+      .project .image-container img {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -59,80 +83,54 @@
         <li><a href="https://www.facebook.com/profile.php?id=100017475727456&mibextid=LQQJ4d" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
         <li><a href="https://github.com/medabdellahihabib" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
         <li><a href="https://www.linkedin.com/in/mohamed-habib-1a6b5a251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-
       </ul>
-      
     </nav>
-
-    .project .image-container {
-      display: flex;
-    }
-    
-    .project .image-container img {
-      max-width: 50%; /* Chaque image occupe 50% de la largeur de la div parent */
-      height: auto;
-    }
-    
-    
 
     <div class="project">
       <h2>Dhamet Application 2023</h2>
-      <img src="images\mmnb.png" alt="Dhamet Application">
+      <img src="images/mmnb.png" alt="Dhamet Application">
       <p>Development of a Traditional Game using the Python programming language.</p>
     </div>
 
     <div class="project">
       <h2>Analysis of Educational Inequalities and Illiteracy 2023-2024</h2>
-      <img src="images\th.jpeg" alt="Analysis of Educational Inequalities and Illiteracy">
+      <img src="images/th.jpeg" alt="Analysis of Educational Inequalities and Illiteracy">
       <p>Analysis of Educational Inequalities and Illiteracy in Mauritania and creation of a logistic regression predictive model to assess illiteracy status based on characteristics such as gender, age, etc.</p>
     </div>
 
     <div class="project">
       <h2>Conversion Rate Challenge 2023-2024</h2>
-      <img src="images\bg.jpeg" alt="Conversion Rate Challenge">
+      <img src="images/bg.jpeg" alt="Conversion Rate Challenge">
       <p>Development of a predictive conversion rate model for an anonymous website, followed by recommendations for the marketing team to optimize revenue.</p>
     </div>
 
     <div class="project">
       <h2>Intelligent Agriculture Platform Oct/2023-Now</h2>
       <div class="image-container">
-        <img src="images\gh.jpeg" alt="Intelligent Agriculture Platform">
-        <img src="images\Image1.png" alt="">
+        <img src="images/gh.jpeg" alt="Intelligent Agriculture Platform">
+        <img src="images/Image1.png" alt="">
       </div>
       <p>Development of an integrated agricultural platform: crop recommendation, production forecasting, pest control, real-time weather data. Use of innovative technologies: AI, IoT for optimal yields and sustainability.</p>
     </div>
-    
-    
 
     <div class="project">
       <a href="https://medabdellahihabib.github.io/Inpc_project/"></a>
       <h2>INPC Data Management and Calculation Website Oct/2023-Now</h2>
-      <img src="images\bbn.PNG" alt="INPC Data Management and Calculation Website">
-      <p>Technologies used: Django, HTML, CSS , ML , Data visualisation  </p>
+      <img src="images/bbn.PNG" alt="INPC Data Management and Calculation Website">
+      <p>Technologies used: Django, HTML, CSS, ML, Data visualization</p>
     </div>
 
-
-
-
     <div class="project">
-      <h2>Computer Vision Challenge </h2>
-      <img src="images\image.png" alt="Computer Vision Challenge">
-      <p>Development of an AI-based (Deep learning ) system tailored to the accurate recognition of Mauritanian license plates.
-       challenge participation conducted by RIM-AI.</p>
+      <h2>Computer Vision Challenge</h2>
+      <img src="images/image.png" alt="Computer Vision Challenge">
+      <p>Development of an AI-based (Deep learning) system tailored to the accurate recognition of Mauritanian license plates. Challenge participation conducted by RIM-AI.</p>
     </div>
 
-
-
     <div class="project">
-      <h2>Age and sexe Prediction from Vocal Data using Deep Learning (LSTM) 2024</h2>
-      <img src="images\asd.PNG" alt="Age Prediction from Vocal Data">
+      <h2>Age and Sexe Prediction from Vocal Data using Deep Learning (LSTM) 2024</h2>
+      <img src="images/asd.PNG" alt="Age Prediction from Vocal Data">
       <p>Development of an LSTM-based deep learning model to predict age from vocal data. Data collected and preprocessed to train the model for accurate age prediction.</p>
     </div>
-
-
-
-
-
   </div>
   <!-- End of wrapper -->
 
@@ -146,4 +144,3 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-
