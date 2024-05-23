@@ -27,10 +27,17 @@
 
     .project h2 {
       color: #333;
+      transition: color 0.3s;
+    }
+
+    .project a:hover h2 {
+      color: blue;
     }
 
     .project img {
       max-width: 100%;
+      max-height: 200px;
+      width: auto;
       height: auto;
       display: block;
       margin: 10px auto;
@@ -46,6 +53,8 @@
     
     .project .image-container img {
       max-width: 50%;
+      max-height: 200px;
+      width: auto;
       height: auto;
     }
 
@@ -143,8 +152,9 @@
       </a>
       <img src="images/asd.PNG" alt="Age Prediction from Vocal Data">
       <p>Development of an LSTM-based deep learning model to predict age from vocal data. Data collected and preprocessed to train the model for accurate age prediction.</p>
-    </div>
-    
+    </div>  
+  </div>
+  <!-- End of wrapper -->
 
   <!-- Scripts -->
   <script src="assets/js/jquery.min.js"></script>
@@ -156,7 +166,3 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-
-
-
-
