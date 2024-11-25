@@ -4,18 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My CV</title>
+  <link rel="stylesheet" href="assets/css/main.css"> <!-- CSS externe -->
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
     .pdf-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin: 20px;
     }
+
     iframe {
       border: 1px solid #ccc;
       width: 80%;
       height: 600px;
     }
+
     .download-link {
       margin-top: 10px;
       font-size: 16px;
@@ -23,19 +33,43 @@
       color: #007BFF;
       font-weight: bold;
     }
+
     .download-link:hover {
       color: #0056b3;
       text-decoration: underline;
     }
   </style>
 </head>
-<body>
-  <div class="pdf-container">
-    <h1>My CV</h1>
-    <!-- PDF Viewer -->
-    <iframe src="images/my_cv.pdf" title="My CV"></iframe>
-    <!-- Download Link -->
-    <a href="images/my_cv.pdf" class="download-link" download>Download My CV</a>
+<body class="is-preload">
+  <!-- Wrapper -->
+  <div id="wrapper">
+    <!-- Header -->
+    <header id="header">
+      <a href="#" class="logo">Med Habib</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+      <ul class="links">
+        <li><a href="https://medabdellahihabib.github.io/MedHabib.github.io/">About</a></li>
+        <li class="active"><a href="#">Projects</a></li>
+        <li><a href="CV.html">CV</a></li>
+      </ul>
+      <ul class="icons">
+        <li><a href="https://www.facebook.com/profile.php?id=100017475727456&mibextid=LQQJ4d" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+        <li><a href="https://github.com/medabdellahihabib" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+        <li><a href="https://www.linkedin.com/in/mohamed-habib-1a6b5a251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+      </ul>
+    </nav>
+
+    <!-- PDF Section -->
+    <div class="pdf-container">
+      <h1>My CV</h1>
+      <!-- PDF Viewer -->
+      <iframe src="images/my_cv.pdf" title="My CV"></iframe>
+      <!-- Download Link -->
+      <a href="images/my_cv.pdf" class="download-link" download>Download My CV</a>
+    </div>
   </div>
 </body>
 </html>
