@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My CV</title>
+  <style>
+    .pdf-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+    }
+    iframe {
+      border: 1px solid #ccc;
+      width: 80%;
+      height: 600px;
+    }
+    .download-link {
+      margin-top: 10px;
+      font-size: 16px;
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+    .download-link:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="pdf-container">
+    <h1>My CV</h1>
+    <!-- PDF Viewer -->
+    <iframe src="images/my_cv.pdf" title="My CV"></iframe>
+    <!-- Download Link -->
+    <a href="images/my_cv.pdf" class="download-link" download>Download My CV</a>
+  </div>
+</body>
+</html>
