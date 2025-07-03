@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My CV</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
-
+  <link rel="stylesheet" href="assets/css/main.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -14,71 +13,79 @@
       background-color: #f0f0f0;
     }
 
-    #wrapper {
+    .project {
+      background-color: #fff;
+      margin: 20px;
       padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 45%;
+      display: inline-block;
+      vertical-align: top;
+      box-sizing: border-box;
     }
 
-    header#header {
-      background-color: #333;
-      padding: 20px;
-      text-align: center;
+    .project h2 {
+      color: #333;
+      transition: color 0.3s;
     }
 
-    header#header .logo {
-      color: white;
-      font-size: 24px;
-      text-decoration: none;
+    .project a:hover h2 {
+      color: blue;
     }
 
-    nav#nav {
-      background-color: #444;
-      padding: 10px 0;
+    .project img {
+      max-width: 100%;
+      max-height: 200px;
+      width: auto;
+      height: auto;
+      display: block;
+      margin: 10px auto;
+    }
+
+    .project p {
+      color: #666;
+    }
+
+    .project .image-container {
       display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+    }
+    
+    .project .image-container img {
+      max-width: 50%;
+      max-height: 200px;
+      width: auto;
+      height: auto;
     }
 
-    nav#nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 20px;
-      display: flex;
-      align-items: center;
+    @media screen and (max-width: 768px) {
+      .project {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .project .image-container {
+        flex-direction: column;
+      }
+
+      .project .image-container img {
+        max-width: 100%;
+      }
     }
 
-    nav#nav ul.links li {
-      margin-right: 15px;
-    }
-
-    nav#nav ul.links li a {
-      color: white;
-      text-decoration: none;
-      padding: 6px 12px;
-      border-radius: 4px;
-    }
-
-    nav#nav ul.links li.active a,
-    nav#nav ul.links li a:hover {
-      background-color: #666;
-    }
-
-    nav#nav ul.icons li {
-      margin-left: 10px;
-    }
-
-    nav#nav ul.icons a {
-      color: white;
-      font-size: 20px;
+    .large-photo {
+      width: 900px;
+      height: auto; /* Garde le ratio de l'image */
     }
 
     .pdf-container {
       text-align: center;
-      margin: 30px 0;
+      margin: 20px 0;
     }
 
     .download-link {
       display: inline-block;
-      padding: 12px 24px;
+      padding: 10px 20px;
       background-color: #333;
       color: #fff;
       text-decoration: none;
@@ -88,22 +95,6 @@
 
     .download-link:hover {
       background-color: #555;
-    }
-
-    @media screen and (max-width: 768px) {
-      nav#nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav#nav ul {
-        margin: 10px 0;
-        flex-direction: column;
-      }
-
-      nav#nav ul li {
-        margin: 5px 0;
-      }
     }
   </style>
 </head>
@@ -123,30 +114,18 @@
         <li><a href="CV.html">Resume</a></li>
       </ul>
       <ul class="icons">
-        <li>
-          <a href="https://www.facebook.com/profile.php?id=100017475727456&mibextid=LQQJ4d" class="icon brands fa-facebook-f">
-            <span class="label">Facebook</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/medabdellahihabib" class="icon brands fa-github">
-            <span class="label">GitHub</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/mohamed-habib-1a6b5a251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="icon brands fa-linkedin-in">
-            <span class="label">LinkedIn</span>
-          </a>
-        </li>
+        <li><a href="https://www.facebook.com/profile.php?id=100017475727456&mibextid=LQQJ4d" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+        <li><a href="https://github.com/medabdellahihabib" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+        <li><a href="https://www.linkedin.com/in/mohamed-habib-1a6b5a251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
       </ul>
     </nav>
 
-    <!-- PDF Download Section -->
+    <!-- PDF Section -->
     <div class="pdf-container">
-      <a href="images/cv-fr.pdf" class="download-link" download>Download My Resume (French)</a>
+      <a href="images/cv-fr.pdf" class="download-link" download>Download My Resume (french)</a>
     </div>
-    <div class="pdf-container">
-      <a href="images/cv-ang.pdf" class="download-link" download>Download My Resume (English)</a>
+        <div class="pdf-container">
+      <a href="images/cv-ang.pdf" class="download-link" download>Download My Resume (anglais)</a>
     </div>
   </div>
 
