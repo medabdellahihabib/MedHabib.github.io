@@ -15,26 +15,42 @@
             margin: 0 auto; /* Centre l'image */
         }
 
+        /* Texte blanc pour la section certifications */
+        #certifications {
+            color: white !important;
+            background-color: #222; /* fond sombre pour contraste */
+            padding: 2em;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 2em auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
 
-    .image.main img {
-        width: 60%;
-        max-width: 600px;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-    }
-#certifications, 
-#certifications strong, 
-#certifications li {
-    color: white !important;
+        #certifications strong, 
+        #certifications li {
+            color: white !important;
+        }
+
+        #certifications a {
+            color: #66ccff !important;
+            text-decoration: none;
+        }
+
+        #certifications a:hover {
+            color: #ffffff !important;
+            text-decoration: underline;
+        }
+#certifications a {
+    color: #66ccff !important;
+    text-decoration: none;
 }
 
-</style>
+#certifications a:hover {
+    color: #66ccff !important;
+    text-decoration: underline;
+}
 
-
-
-
-</style>
+    </style>
 </head>
 <body class="is-preload">
     <div id="wrapper" class="fade-in">
@@ -54,7 +70,6 @@
                 <li><a href="elements.html">Projects</a></li>
                 <li><a href="CV.html">CV</a></li>
                 <li><a href="Certifications.html">Certifications</a></li>
-
             </ul>
             <ul class="icons">
                 <li><a href="https://www.facebook.com/profile.php?id=100017475727456" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
@@ -63,46 +78,41 @@
             </ul>
         </nav>
 
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>
+                    <strong>Natural Language Processing with Classification and Vector Spaces</strong><br>
+                    <a href="https://coursera.org/verify/X9FKHKMEYM3D" target="_blank" rel="noopener noreferrer">Certification link</a>
+                </li>
+                <li>
+                    <strong>Natural Language Processing with Probabilistic Models</strong><br>
+                    <a href="https://coursera.org/verify/PHWTIY2YFE7U" target="_blank" rel="noopener noreferrer">Certification link</a>
+                </li>
+                <li>
+                    <strong>Natural Language Processing with Attention Models</strong><br>
+                    <a href="https://coursera.org/verify/91C3LH6866MO" target="_blank" rel="noopener noreferrer">Certification link</a>
+                </li>
+                <li>
+                    <strong>Natural Language Processing with Sequence Models</strong><br>
+                    <a href="https://coursera.org/verify/C50HGRLGATKN" target="_blank" rel="noopener noreferrer">Certification link</a>
+                </li>
+                <li>
+                    <strong>Introduction to Microsoft Azure Cloud Services</strong><br>
+                    <a href="https://coursera.org/verify/P5W36P2T78QJ" target="_blank" rel="noopener noreferrer">Certification link</a>
+                </li>
+                <li>
+                    <strong>Microsoft Azure Services and Lifecycles</strong><br>
+                    <a href="https://coursera.org/verify/9I7SV5VC5NLP" target="_blank" rel="noopener noreferrer">Certification link</a>
+                </li>
+                <li>
+                    <strong>DevOps: CI/CD with Maven, Jenkins, SonarQube, Nexus</strong><br>
+                    <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-af0e7b01-4a3b-4def-80fe-5e7fc32f539d.jpg?v=1729808104000" target="_blank" rel="noopener noreferrer">Certification link</a>
+                </li>
+            </ul>
+        </section>
 
-
-
-<section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-        <li>
-            <strong>Natural Language Processing with Classification and Vector Spaces</strong><br>
-            <a href="https://coursera.org/verify/X9FKHKMEYM3D" target="_blank">Certification link</a>
-        </li>
-        <li>
-            <strong>Natural Language Processing with Probabilistic Models</strong><br>
-            <a href="https://coursera.org/verify/PHWTIY2YFE7U" target="_blank">Certification link</a>
-        </li>
-        <li>
-            <strong>Natural Language Processing with Attention Models</strong><br>
-            <a href="https://coursera.org/verify/91C3LH6866MO" target="_blank">Certification link</a>
-        </li>
-        <li>
-            <strong>Natural Language Processing with Sequence Models</strong><br>
-            <a href="https://coursera.org/verify/C50HGRLGATKN" target="_blank">Certification link</a>
-        </li>
-        <li>
-            <strong>Introduction to Microsoft Azure Cloud Services</strong><br>
-            <a href="https://coursera.org/verify/P5W36P2T78QJ" target="_blank">Certification link</a>
-        </li>
-        <li>
-            <strong>Microsoft Azure Services and Lifecycles</strong><br>
-            <a href="https://coursera.org/verify/9I7SV5VC5NLP" target="_blank">Certification link</a>
-        </li>
-        <li>
-            <strong>DevOps: CI/CD with Maven, Jenkins, SonarQube, Nexus</strong><br>
-            <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-af0e7b01-4a3b-4def-80fe-5e7fc32f539d.jpg?v=1729808104000" target="_blank">Certification link</a>
-        </li>
-    </ul>
-</section>
-
-
-
-
+    </div>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
