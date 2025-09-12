@@ -3,254 +3,330 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
-  <link rel="stylesheet" href="assets/css/main.css">
+  <title>Projects | Med Habib</title>
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-color: #f0f0f0;
+    }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      transition: color 0.3s;
+    }
+
+    h2:hover {
+      color: #007bff;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    /* Wrapper */
+    #wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    #header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 30px;
+    }
+
+    #header .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #007bff;
+    }
+
+    /* Navigation */
+    #nav {
+      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #nav ul.links li {
+      margin-right: 20px;
+    }
+
+    #nav ul.links li a {
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    #nav ul.links li a:hover,
+    #nav ul.links li.active a {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    #nav ul.icons li {
+      margin-right: 15px;
+    }
+
+    #nav ul.icons li a {
+      font-size: 1.2rem;
+      color: #555;
+      transition: color 0.3s;
+    }
+
+    #nav ul.icons li a:hover {
+      color: #007bff;
+    }
+
+    /* Project Cards */
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     .project {
       background-color: #fff;
-      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 48%;
+      margin-bottom: 30px;
       padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 45%;
-      display: inline-block;
-      vertical-align: top;
-      box-sizing: border-box;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .project h2 {
-      color: #333;
-      transition: color 0.3s;
-    }
-
-    .project a:hover h2 {
-      color: blue;
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
     .project img {
-      max-width: 100%;
-      max-height: 200px;
-      width: auto;
-      height: auto;
-      display: block;
-      margin: 10px auto;
-    }
-
-    .project p {
-      color: #666;
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      object-fit: cover;
+      max-height: 250px;
     }
 
     .project .image-container {
       display: flex;
-    }
-    
-    .project .image-container img {
-      max-width: 50%;
-      max-height: 200px;
-      width: auto;
-      height: auto;
+      gap: 10px;
+      margin-bottom: 15px;
     }
 
-    @media screen and (max-width: 768px) {
+    .project .image-container img {
+      width: 50%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .project ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
       .project {
         width: 100%;
-        margin: 10px 0;
-      }
-
-      .project .image-container {
-        flex-direction: column;
       }
 
       .project .image-container img {
-        max-width: 100%;
+        width: 100%;
       }
     }
-    .large-photo {
-      width: 900px;
-      height: auto; /* Garde le ratio de l'image */
-    }
-    
-   
 
- 
-    
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #777;
+      font-size: 0.9rem;
+      border-top: 1px solid #ddd;
+      margin-top: 50px;
+    }
+
   </style>
 </head>
-<body class="is-preload">
-  <!-- Wrapper -->
+
+<body>
+
   <div id="wrapper">
+
     <!-- Header -->
     <header id="header">
       <a href="#" class="logo">Med Habib</a>
     </header>
 
-    <!-- Nav -->
+    <!-- Navigation -->
     <nav id="nav">
       <ul class="links">
         <li><a href="https://medabdellahihabib.github.io/MedHabib.github.io/">About</a></li>
         <li class="active"><a href="#">Projects</a></li>
         <li><a href="CV.html">CV</a></li>
         <li><a href="Certifications.html">Certifications</a></li>
-        
       </ul>
       <ul class="icons">
-        <li><a href="https://www.facebook.com/profile.php?id=100017475727456&mibextid=LQQJ4d" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-        <li><a href="https://github.com/medabdellahihabib" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-        <li><a href="https://www.linkedin.com/in/mohamed-habib-1a6b5a251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100017475727456&mibextid=LQQJ4d" class="fab fa-facebook-f"></a></li>
+        <li><a href="https://github.com/medabdellahihabib" class="fab fa-github"></a></li>
+        <li><a href="https://www.linkedin.com/in/mohamed-habib-1a6b5a251" class="fab fa-linkedin-in"></a></li>
       </ul>
     </nav>
 
-    <div class="project">
-      <a href="https://github.com/medabdellahihabib/Dhamet_jeu">
-        <h2>Dhamet Application 2023</h2>
-      </a>
-      <img src="images/mmnb.png" alt="Dhamet Application">
-      <p>Development of a Traditional Game using the Python programming language.</p>
-    </div>
-    
-    <div class="project">
-      <a href="https://github.com/medabdellahihabib/ANALYSIS_OF_EDUCATIONAL_INEQUALITIES_AND_ILLITERACY">
-        <h2>Analysis of Educational Inequalities and Illiteracy 2023-2024</h2>
-      </a>
-      <img src="images/th.jpeg" alt="Analysis of Educational Inequalities and Illiteracy">
-      <p>Analysis of Educational Inequalities and Illiteracy in Mauritania and creation of a logistic regression predictive model to assess illiteracy status based on characteristics such as gender, age, etc.</p>
-    </div>
-
-    
-<div class="project">
-  <a href="https://github.com/medabdellahihabib/Fraud_Detection_Datathon" target="_blank">
-    <h2>First Place – ESP Datathon 2025: Fraud Detection</h2>
-  </a>
-  <img src="images/ESP_Data_club.jpg" alt="ESP Datathon" class="large-img">
-  <p>
-    This project tackled a critical challenge: transactional fraud detection.  
-    We implemented and compared several unsupervised machine learning models, 
-    including Isolation Forest, Local Outlier Factor (LOF), and a Deep Learning 
-    Autoencoder. These models were designed to detect complex and previously 
-    unknown fraud patterns without requiring pre-labeled data.
-  </p>
-</div>
-
-
-
-
-
-<div class="project">
-  <h2>Terminal à conteneurs de Nouakchott (TCN) – 6-month Internship</h2>
-  <h4>Intern – Nouakchott, Mauritania</h4>
-  <img src="images/tech.PNG" alt="TCN Project" class="large-img">
-
-  <p>
-    Developed a web application for automated maintenance management using 
-    <strong>Django</strong>, <strong>PostgreSQL</strong>, and <strong>Docker</strong>. 
-    Features included:
-  </p>
-  <ul>
-    <li>Centralization of real-time intervention reports with multi-role authentication (23 profiles)</li>
-    <li>Dynamic forms tailored to sections (Crane, Workshop, Facility)</li>
-    <li>Interactive KPI dashboards using <strong>Bokeh</strong></li>
-    <li>Automated email reminders</li>
-    <li>AI layer for predictive maintenance (ML models, MLflow, Airflow) deployed via Jenkins CI/CD</li>
-  </ul>
-</div>
-
-
-
-
-
-
-
-    <div class="project">
-      <a href="https://github.com/medabdellahihabib/Convertion_rate">
-        <h2>Conversion Rate Challenge 2023-2024</h2>
-      </a>
-      <img src="images/bg.jpeg" alt="Conversion Rate Challenge">
-      <p>Development of a predictive conversion rate model for an anonymous website, followed by recommendations for the marketing team to optimize revenue.</p>
-    </div>
-    
-    <div class="project">
-      <a href="https://github.com/medabdellahihabib/smart_agro">
-        <h2>Intelligent Agriculture Platform Oct/2023-Now</h2>
-      </a>
-      <div class="image-container">
-        <img src="images/gh.jpeg" alt="Intelligent Agriculture Platform">
-        <img src="images/Image1.png" alt="">
-      </div>
-      <p>Development of an integrated agricultural platform: crop recommendation, production forecasting, pest control, real-time weather data. Use of innovative technologies: AI, IoT for optimal yields and sustainability.</p>
-    </div>
-    
-
-    
-    <div class="project">
-      <a href="">
-        <h2>Computer Vision Challenge</h2>
-      </a>
-      <img src="images/image.png" alt="Computer Vision Challenge">
-      <p>Development of an AI-based (Deep learning) system tailored to the accurate recognition of Mauritanian license plates. Challenge participation conducted by RIM-AI.</p>
-    </div>
-    
-    <div class="project">
-      <a href="https://github.com/medabdellahihabib/recognation_age_sexe_from_vocal-">
-        <h2>Age and Sex Prediction from Vocal Data using Deep Learning (LSTM) 2024</h2>
-      </a>
-<img src="images/asd.PNG" alt="Age Prediction from Vocal Data">
-      <p>Development of an LSTM-based deep learning model to predict age from vocal data. Data collected and preprocessed to train the model for accurate age prediction.</p>
-    </div>
-    <div class="project">
-      <a href="https://github.com/medabdellahihabib/devops_projet">
-        <h2>CI/CD Pipeline with Real-Time Monitoring for Spring/Angular Application</h2>
-      </a>
-<img src="images/devops.png" alt="CI/CD Pipeline for Spring/Angular Application" class="large-photo">
-
-
-      <p>– Creation and automation of a complete CI/CD pipeline: build, testing, deployment, and monitoring.</p>  
-      </p>– Tools used: Git, Jenkins, Maven, JUnit, Nexus, SonarQube, Docker, Prometheus, Grafana.</p>
-    </div>
-
-    <div class="project">
-      <a href="https://github.com/medabdellahihabib/devops_projet">
-      <h2>BNM_Data_Warehouse: ETL Process for Data Centralization</h2>
-      <img src="images/warehouse.JPG" alt="BNM_Data_Warehouse ETL Process" class="large-photo">
-      <p>
-        The BNM_Data_Warehouse project, developed for the **Banque Nationale de Mauritanie (BNM)**, focuses on the creation and implementation of an ETL (Extract, Transform, Load) process 
-        to centralize and organize data from multiple sources. This ETL pipeline ensures efficient data extraction, transformation for consistency, 
-        and loading into a centralized warehouse, providing a robust foundation for further data analysis and visualization.
-      </p>
-
-
-
-
-
-
-
-    </div>
-    
-    
-    <style>
-      .large-photo {
-        width: 1000px;
-        height: auto; /* Maintains aspect ratio */
-      }
-    </style>
-    
+    <!-- Projects -->
+    <div class="projects-container">
       
+      <!-- Project 1 -->
+      <div class="project">
+        <a href="https://github.com/medabdellahihabib/Dhamet_jeu">
+          <h2>Dhamet Application 2023</h2>
+        </a>
+        <img src="images/mmnb.png" alt="Dhamet Application">
+        <p>Development of a Traditional Game using the Python programming language.</p>
+      </div>
 
+      <!-- Project 2 -->
+      <div class="project">
+        <a href="https://github.com/medabdellahihabib/ANALYSIS_OF_EDUCATIONAL_INEQUALITIES_AND_ILLITERACY">
+          <h2>Analysis of Educational Inequalities and Illiteracy 2023-2024</h2>
+        </a>
+        <img src="images/th.jpeg" alt="Analysis of Educational Inequalities">
+        <p>Analysis of Educational Inequalities and Illiteracy in Mauritania and creation of a logistic regression predictive model to assess illiteracy status based on characteristics such as gender, age, etc.</p>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project">
+        <a href="https://github.com/medabdellahihabib/Fraud_Detection_Datathon" target="_blank">
+          <h2>First Place – ESP Datathon 2025: Fraud Detection</h2>
+        </a>
+        <img src="images/ESP_Data_club.jpg" alt="ESP Datathon">
+        <p>This project tackled a critical challenge: transactional fraud detection. We implemented and compared several unsupervised machine learning models, including Isolation Forest, Local Outlier Factor (LOF), and a Deep Learning Autoencoder for detecting unknown fraud patterns.</p>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project">
+        <h2>Terminal à conteneurs de Nouakchott (TCN) – 6-month Internship</h2>
+        <img src="images/tech.PNG" alt="TCN Project">
+        <p>Developed a web application for automated maintenance management using Django, PostgreSQL, and Docker. Features included:</p>
+        <ul>
+          <li>Centralization of real-time intervention reports with multi-role authentication (23 profiles)</li>
+          <li>Dynamic forms tailored to sections (Crane, Workshop, Facility)</li>
+          <li>Interactive KPI dashboards using Bokeh</li>
+          <li>Automated email reminders</li>
+          <li>AI layer for predictive maintenance (ML models, MLflow, Airflow) deployed via Jenkins CI/CD</li>
+        </ul>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project">
+        <a href="">
+          <h2>Computer Vision Challenge</h2>
+        </a>
+        <img src="images/image.png" alt="Computer Vision Challenge">
+        <p>Collected and scraped over 2,000 images of Mauritanian license plates from websites such as Voursa, Facebook Marketplace, and Google Images. Developed an AI-based deep learning system for accurate license plate recognition. Challenge participation conducted by RIM-AI.</p>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project">
+        <a href="https://github.com/medabdellahihabib/devops_projet">
+          <h2>CI/CD Pipeline with Real-Time Monitoring for Spring/Angular Application</h2>
+        </a>
+        <img src="images/devops.png" alt="CI/CD Pipeline" class="large-photo">
+        <p>Creation and automation of a complete CI/CD pipeline: build, testing, deployment, and monitoring. Tools used: Git, Jenkins, Maven, JUnit, Nexus, SonarQube, Docker, Prometheus, Grafana.</p>
+      </div>
+
+      <!-- Project 7 -->
+      <div class="project">
+        <a href="https://github.com/medabdellahihabib/Convertion_rate">
+          <h2>Conversion Rate Challenge 2023-2024</h2>
+        </a>
+        <img src="images/bg.jpeg" alt="Conversion Rate Challenge">
+        <p>Development of a predictive conversion rate model for an anonymous website, followed by recommendations for the marketing team to optimize revenue.</p>
+      </div>
+
+      <!-- Project 8 -->
+      <div class="project">
+        <a href="https://github.com/medabdellahihabib/smart_agro">
+          <h2>Intelligent Agriculture Platform Oct/2023-Now</h2>
+        </a>
+        <div class="image-container">
+          <img src="images/gh.jpeg" alt="Intelligent Agriculture Platform">
+          <img src="images/Image1.png" alt="">
+        </div>
+        <p>Development of an integrated agricultural platform: crop recommendation, production forecasting, pest control, real-time weather data. Use of AI and IoT for optimal yields and sustainability.</p>
+      </div>
+
+      <!-- Project 9 -->
+      <div class="project">
+        <a href="https://github.com/medabdellahihabib/recognation_age_sexe_from_vocal-">
+          <h2>Age and Sex Prediction from Vocal Data using Deep Learning (LSTM) 2024</h2>
+        </a>
+        <img src="images/asd.PNG" alt="Age Prediction from Vocal Data">
+        <p>Development of an LSTM-based deep learning model to predict age from vocal data. Data collected and preprocessed to train the model for accurate age prediction.</p>
+      </div>
+
+      <!-- Project 10 -->
+      <div class="project">
+        <a href="https://github.com/medabdellahihabib/devops_projet">
+          <h2>BNM_Data_Warehouse: ETL Process for Data Centralization</h2>
+        </a>
+        <img src="images/warehouse.JPG" alt="BNM_Data_Warehouse ETL Process" class="large-photo">
+        <p>The BNM_Data_Warehouse project, developed for the Banque Nationale de Mauritanie (BNM), focuses on the creation and implementation of an ETL process to centralize and organize data from multiple sources. Provides a robust foundation for further data analysis and visualization.</p>
+      </div>
+
+    </div>
+
+    <footer>
+      &copy; 2025 Med Habib. All Rights Reserved.
+    </footer>
 
   </div>
 
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.scrollex.min.js"></script>
-  <script src="assets/js/jquery.scrolly.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
