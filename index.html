@@ -5,36 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>Med Habib - Portfolio</title>
 
+    <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
+    <!-- Custom Compact Style -->
     <style>
-        /* ===== PROFILE IMAGE STYLE ===== */
+        body {
+            line-height: 1.6;
+        }
+
+        /* ===== INTRO ===== */
+        #intro {
+            padding: 4rem 2rem 2rem 2rem !important;
+        }
+
+        #intro h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        #intro p {
+            margin-bottom: 1rem;
+        }
+
+        /* ===== PROFILE IMAGE ===== */
         .profile-image {
             display: flex;
             justify-content: center;
-            margin: 40px 0;
+            margin: 20px 0 10px 0;
         }
 
         .profile-image img {
-            width: 300px;
-            height: 300px;
+            width: 260px;
+            height: 260px;
             object-fit: cover;
             border-radius: 50%;
-            border: 5px solid #ffffff;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 4px solid #fff;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
         }
 
         .profile-image img:hover {
-            transform: scale(1.08);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
 
+        /* ===== MAIN CONTENT ===== */
+        .post.featured {
+            padding: 1.5rem 2rem !important;
+        }
+
+        header.major {
+            margin: 1rem 0 !important;
+        }
+
+        header.major h2 {
+            margin-bottom: 0.3rem;
+        }
+
+        header.major p {
+            margin-bottom: 0.8rem;
+        }
+
+        /* ===== FOOTER ===== */
+        #copyright {
+            padding: 1rem 0;
+        }
+
+        /* ===== MOBILE ===== */
         @media (max-width: 768px) {
+            #intro {
+                padding: 3rem 1.5rem 1.5rem 1.5rem !important;
+            }
+
             .profile-image img {
-                width: 220px;
-                height: 220px;
+                width: 200px;
+                height: 200px;
             }
         }
     </style>
@@ -45,10 +91,14 @@
 
     <!-- Intro -->
     <div id="intro">
-        <h1>Med Habib<br />Portfolio</h1>
+        <h1>Med Habib<br>Portfolio</h1>
         <p>Hi! My name is Mohamed Habib.</p>
         <ul class="actions">
-            <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+            <li>
+                <a href="#header" class="button icon solid solo fa-arrow-down scrolly">
+                    Continue
+                </a>
+            </li>
         </ul>
     </div>
 
@@ -76,9 +126,9 @@
     <div id="main">
         <article class="post featured">
 
-            <!-- PROFILE IMAGE -->
+            <!-- Profile Photo -->
             <div class="profile-image">
-                <img src="images/Capture.jpeg" alt="Med Habib Profile Photo">
+                <img src="images/Capture.jpeg" alt="Med Habib Photo">
             </div>
 
             <header class="major">
@@ -86,26 +136,27 @@
                 <p><strong style="font-size:22px;">Data Science Engineer</strong></p>
 
                 <p>
-                    I am a Data Science Engineer who is curious, autonomous, and highly adaptable, with strong teamwork abilities.
-                    My academic background has provided me with a solid foundation in statistical analysis, data engineering,
-                    machine learning, and advanced data modeling techniques.
+                    I am a Data Science Engineer who is curious, autonomous, and highly adaptable,
+                    with strong teamwork abilities and a solid foundation in statistics, data engineering,
+                    machine learning, and advanced modeling.
                 </p>
 
                 <p>
-                    I am passionate about Artificial Intelligence and Data Science, and I continuously seek to improve my skills
-                    by staying up-to-date with the latest technologies, tools, and industry trends.
+                    Passionate about Artificial Intelligence and Data Science, I continuously improve my
+                    skills by exploring modern technologies, tools, and industry best practices.
                 </p>
 
                 <p>
-                    I have hands-on experience with Python, R, SQL, and modern machine learning & deep learning frameworks such as
-                    TensorFlow and PyTorch. I also work with MLOps tools to deploy scalable solutions.
+                    I have hands-on experience with Python, R, SQL, TensorFlow, PyTorch, and MLOps tools
+                    to build scalable and production-ready solutions.
                 </p>
 
                 <p>
-                    Through projects and internships, I developed strong problem-solving skills and enjoy building impactful
-                    data-driven solutions.
+                    Through academic projects and internships, I developed strong problem-solving skills
+                    and enjoy delivering impactful, data-driven solutions.
                 </p>
             </header>
+
         </article>
     </div>
 
