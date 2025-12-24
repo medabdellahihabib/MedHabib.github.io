@@ -4,99 +4,128 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>Med Habib - Portfolio</title>
+
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
     <style>
-        .image.main img {
-            width: 60%;
-            max-width: 600px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
+        /* ===== PROFILE IMAGE STYLE ===== */
+        .profile-image {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .profile-image img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #ffffff;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .profile-image img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        @media (max-width: 768px) {
+            .profile-image img {
+                width: 220px;
+                height: 220px;
+            }
         }
     </style>
 </head>
 
 <body class="is-preload">
-    <div id="wrapper" class="fade-in">
+<div id="wrapper" class="fade-in">
 
-        <!-- Intro -->
-        <div id="intro">
-            <h1>Med Habib<br />Portfolio</h1>
-            <p>Hi! My name is Mohamed Habib.</p>
-            <ul class="actions">
-                <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-            </ul>
-        </div>
-
-        <!-- Header -->
-        <header id="header">
-            <a href="index.html" class="logo">Med Habib</a>
-        </header>
-
-        <!-- Navigation -->
-        <nav id="nav">
-            <ul class="links">
-                <li class="active"><a href="index.html">About</a></li>
-                <li><a href="elements.html">Projects</a></li>
-                <li><a href="CV.html">CV</a></li>
-                <li><a href="Certifications.html">Certifications</a></li>
-            </ul>
-            <ul class="icons">
-                <li><a href="https://www.facebook.com/profile.php?id=100017475727456" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                <li><a href="https://github.com/medabdellahihabib" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                <li><a href="https://www.linkedin.com/in/mohamed-habib-1a6b5a251" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-            </ul>
-        </nav>
-
-        <!-- Main Section -->
-        <div id="main">
-            <article class="post featured">
-                <a href="#" class="image main">
-                    <img src="images/Capture.jpeg" alt="Profile Picture" />
-                </a>
-
-                <header class="major">
-                    <h2><a href="#">Med Habib</a></h2>
-                    <p><strong style="font-size: 20px;">Data Science Engineer</strong></p>
-
-                    <p>
-                        I am a Data Science Engineer who is curious, autonomous, and highly adaptable, with strong teamwork abilities.
-                        My academic background has provided me with a solid foundation in statistical analysis, data engineering, machine
-                        learning, and advanced data modeling techniques.
-                    </p>
-
-                    <p>
-                        I am passionate about Artificial Intelligence and Data Science, and I continuously seek to improve my skills by staying
-                        up-to-date with the latest technologies, tools, and industry trends.
-                    </p>
-                    <p>
-                        I have hands-on experience with Python, R, SQL, and modern machine learning & deep learning frameworks such as
-                        TensorFlow and PyTorch. I also work with MLOps tools and techniques to deploy robust and scalable data solutions.
-                    </p>
-
-                    <p>
-                        Through various projects and internships, I have developed strong problem-solving skills and the ability to approach
-                        complex data challenges with precision and creativity. I am eager to contribute to innovative projects that leverage
-                        data to drive impactful decisions and solutions.
-                    </p>
-                </header>
-            </article>
-        </div>       
-        <div id="copyright">
-            <ul>
-                <li>&copy; Med Habib</li>
-            </ul>
-        </div>
+    <!-- Intro -->
+    <div id="intro">
+        <h1>Med Habib<br />Portfolio</h1>
+        <p>Hi! My name is Mohamed Habib.</p>
+        <ul class="actions">
+            <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+        </ul>
     </div>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- Header -->
+    <header id="header">
+        <a href="index.html" class="logo">Med Habib</a>
+    </header>
+
+    <!-- Navigation -->
+    <nav id="nav">
+        <ul class="links">
+            <li class="active"><a href="index.html">About</a></li>
+            <li><a href="elements.html">Projects</a></li>
+            <li><a href="CV.html">CV</a></li>
+            <li><a href="Certifications.html">Certifications</a></li>
+        </ul>
+        <ul class="icons">
+            <li><a href="https://www.facebook.com/profile.php?id=100017475727456" class="icon brands fa-facebook-f"></a></li>
+            <li><a href="https://github.com/medabdellahihabib" class="icon brands fa-github"></a></li>
+            <li><a href="https://www.linkedin.com/in/mohamed-habib-1a6b5a251" class="icon brands fa-linkedin-in"></a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+        <article class="post featured">
+
+            <!-- PROFILE IMAGE -->
+            <div class="profile-image">
+                <img src="images/Capture.jpeg" alt="Med Habib Profile Photo">
+            </div>
+
+            <header class="major">
+                <h2>Med Habib</h2>
+                <p><strong style="font-size:22px;">Data Science Engineer</strong></p>
+
+                <p>
+                    I am a Data Science Engineer who is curious, autonomous, and highly adaptable, with strong teamwork abilities.
+                    My academic background has provided me with a solid foundation in statistical analysis, data engineering,
+                    machine learning, and advanced data modeling techniques.
+                </p>
+
+                <p>
+                    I am passionate about Artificial Intelligence and Data Science, and I continuously seek to improve my skills
+                    by staying up-to-date with the latest technologies, tools, and industry trends.
+                </p>
+
+                <p>
+                    I have hands-on experience with Python, R, SQL, and modern machine learning & deep learning frameworks such as
+                    TensorFlow and PyTorch. I also work with MLOps tools to deploy scalable solutions.
+                </p>
+
+                <p>
+                    Through projects and internships, I developed strong problem-solving skills and enjoy building impactful
+                    data-driven solutions.
+                </p>
+            </header>
+        </article>
+    </div>
+
+    <!-- Footer -->
+    <div id="copyright">
+        <ul>
+            <li>&copy; Med Habib</li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
 </body>
 </html>
